@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WheelComponent } from './wheel/wheel.component';
+import { BunnyComponent } from './bunny/bunny.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WheelComponent
+    BunnyComponent
   ],
   imports: [
     BrowserModule,
