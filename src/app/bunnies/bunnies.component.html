@@ -1,0 +1,9 @@
+
+<body>
+  <h2>My Bunnies</h2>  
+  <ul class="bunnies">
+    <li *ngFor="let bunny of bunnies" (click)="onSelect(bunny)">
+      {{bunny.name}}
+    </li>
+  </ul>
+</body>

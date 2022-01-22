@@ -1,19 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Bunny } from '../bunny';
 import { Guid } from 'guid-typescript';
+
 @Component({
   selector: 'app-bunny',
   templateUrl: './bunny.component.html',
   styleUrls: ['./bunny.component.css']
 })
-export class BunnyComponent implements OnInit {
-
-  bunny: Bunny = {
-    id: Guid.create(),
-    name: 'Gus',
-    description: 'description'
-  };
-
+export class BunnyComponent implements OnInit, Bunny {
   public id: Guid;
   public name = 'name';
   public description = 'description';
@@ -30,7 +24,5 @@ export class BunnyComponent implements OnInit {
   // }
 
   ngOnInit() {
-    // this.name = 'testName';
-    // this.description = 'testDescription';
   }
 }

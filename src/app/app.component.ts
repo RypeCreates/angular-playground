@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BunnyComponent } from './bunny/bunny.component';
+import { Bunny } from './bunny';
+import { BUNNIES } from './mock-bunnies';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +9,10 @@ import { BunnyComponent } from './bunny/bunny.component';
 })
 export class AppComponent implements OnInit {
   public title = 'Bunnies';
-  public bun: BunnyComponent;
-  private bunnies = new Array<BunnyComponent>();
+  private bunnies = new Array<Bunny>();
 
   ngOnInit() {
-    // let bunny = new BunnyComponent('Gus', 'Our brave little boy');
-    // // this.bun = bunny;
-    // this.bunnies.push(bunny);
-    // bunny = new BunnyComponent('Priscilla', 'That spooky bitch');
-    // this.bunnies.push(bunny);
+    this.bunnies = BUNNIES;
   }
 
   public getBunnies() {
